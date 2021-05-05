@@ -1,6 +1,6 @@
 # Cas_6_M3
 
-_Programa volcatDeDades: Implementa una aplicación para la gestión de ficheros con el File class package. Se compone por los siguientes módulos:_
+_Programa volcatDeDades_a: Implementa una aplicación para la gestión de ficheros con el File class package. Se compone por los siguientes módulos:_
 
  * Programa inicial del proyecto con el mismo nombre. 
  *
