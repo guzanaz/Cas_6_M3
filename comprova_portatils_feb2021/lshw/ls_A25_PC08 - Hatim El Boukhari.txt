@@ -1,0 +1,406 @@
+pc-alumne
+    descripción: Notebook
+    producto: 80WQ (LENOVO_MT_80WQ_BU_idea_FM_V510-15IKB)
+    fabricante: LENOVO
+    versión: Lenovo V510-15IKB
+    serie: LR09TA4Q
+    anchura: 64 bits
+    capacidades: smbios-3.0 dmi-3.0 smp vsyscall32
+    configuración: administrator_password=disabled boot=normal chassis=notebook family=V510-15IKB frontpanel_password=disabled keyboard_password=disabled power-on_password=disabled sku=LENOVO_MT_80WQ_BU_idea_FM_V510-15IKB uuid=B044CCEC-5ECD-0ABA-5851-A81E84D11386
+  *-core
+       descripción: Placa base
+       producto: LNVNB161216
+       fabricante: LENOVO
+       id físico: 0
+       versión: SDK0L22692 WIN
+       serie: LR09TA4Q
+       ranura: Part Component
+     *-memory
+          descripción: Memoria de sistema
+          id físico: 2
+          ranura: Placa de sistema o placa base
+          tamaño: 8GiB
+        *-bank:0
+             descripción: SODIMM DDR4 Síncrono Unbuffered (Unregistered) 2133 MHz (0,5 ns)
+             producto: Z-2G3B1   1
+             fabricante: 4154
+             id físico: 0
+             serie: 32363448
+             ranura: ChannelA-DIMM0
+             tamaño: 4GiB
+             anchura: 64 bits
+             reloj: 2133MHz (0.5ns)
+        *-bank:1
+             descripción: SODIMM DDR4 Síncrono Unbuffered (Unregistered) 2133 MHz (0,5 ns)
+             producto: CT4G4SFS824A.C8FF
+             fabricante: 859B
+             id físico: 1
+             serie: E1FF0078
+             ranura: ChannelB-DIMM0
+             tamaño: 4GiB
+             anchura: 64 bits
+             reloj: 2133MHz (0.5ns)
+     *-cache:0
+          descripción: L1 caché
+          id físico: 6
+          ranura: L1 Cache
+          tamaño: 128KiB
+          capacidad: 128KiB
+          capacidades: synchronous internal write-back unified
+          configuración: level=1
+     *-cache:1
+          descripción: L2 caché
+          id físico: 7
+          ranura: L2 Cache
+          tamaño: 512KiB
+          capacidad: 512KiB
+          capacidades: synchronous internal write-back unified
+          configuración: level=2
+     *-cache:2
+          descripción: L3 caché
+          id físico: 8
+          ranura: L3 Cache
+          tamaño: 3MiB
+          capacidad: 3MiB
+          capacidades: synchronous internal write-back unified
+          configuración: level=3
+     *-cpu
+          descripción: CPU
+          producto: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+          fabricante: Intel Corp.
+          id físico: 9
+          información del bus: cpu@0
+          versión: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+          serie: To Be Filled By O.E.M.
+          ranura: U3E1
+          tamaño: 800MHz
+          capacidad: 3100MHz
+          anchura: 64 bits
+          reloj: 100MHz
+          capacidades: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d cpufreq
+          configuración: cores=2 enabledcores=2 threads=4
+     *-firmware
+          descripción: BIOS
+          fabricante: LENOVO
+          id físico: a
+          versión: 2WCN29WW
+          date: 07/12/2017
+          tamaño: 1MiB
+          capacidad: 8128KiB
+          capacidades: pci upgrade shadowing cdboot bootselect edd int5printscreen int9keyboard int14serial int17printer acpi usb ls120boot zipboot biosbootspecification netboot uefi
+     *-pci
+          descripción: Host bridge
+          producto: Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers
+          fabricante: Intel Corporation
+          id físico: 100
+          información del bus: pci@0000:00:00.0
+          versión: 02
+          anchura: 32 bits
+          reloj: 33MHz
+          configuración: driver=skl_uncore
+          recursos: irq:0
+        *-display
+             descripción: VGA compatible controller
+             producto: HD Graphics 620
+             fabricante: Intel Corporation
+             id físico: 2
+             información del bus: pci@0000:00:02.0
+             versión: 02
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pciexpress msi pm vga_controller bus_master cap_list rom
+             configuración: driver=i915 latency=0
+             recursos: irq:127 memoria:d0000000-d0ffffff memoria:c0000000-cfffffff ioport:f000(size=64) memoria:c0000-dffff
+        *-usb
+             descripción: USB controller
+             producto: Sunrise Point-LP USB 3.0 xHCI Controller
+             fabricante: Intel Corporation
+             id físico: 14
+             información del bus: pci@0000:00:14.0
+             versión: 21
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pm msi xhci bus_master cap_list
+             configuración: driver=xhci_hcd latency=0
+             recursos: irq:123 memoria:d1300000-d130ffff
+           *-usbhost:0
+                producto: xHCI Host Controller
+                fabricante: Linux 5.4.0-52-generic xhci-hcd
+                id físico: 0
+                información del bus: usb@1
+                nombre lógico: usb1
+                versión: 5.04
+                capacidades: usb-2.00
+                configuración: driver=hub slots=12 speed=480Mbit/s
+              *-usb:0 NO RECLAMADO
+                   descripción: Dispositivo USB genérico
+                   producto: VFS5011 Fingerprint Reader
+                   fabricante: Validity Sensors, Inc.
+                   id físico: 6
+                   información del bus: usb@1:6
+                   versión: 0.78
+                   serie: b1c6c7627191
+                   capacidades: usb-1.10
+                   configuración: maxpower=100mA speed=12Mbit/s
+              *-usb:1
+                   descripción: Dispositivo USB genérico
+                   producto: USB2.0-CRW
+                   fabricante: Generic
+                   id físico: 7
+                   información del bus: usb@1:7
+                   versión: 39.60
+                   serie: 20100201396000000
+                   capacidades: usb-2.00
+                   configuración: driver=rtsx_usb maxpower=500mA speed=480Mbit/s
+              *-usb:2
+                   descripción: Interfaz Bluetooth
+                   fabricante: Atheros Communications, Inc.
+                   id físico: 8
+                   información del bus: usb@1:8
+                   versión: 0.01
+                   capacidades: bluetooth usb-2.01
+                   configuración: driver=btusb maxpower=100mA speed=12Mbit/s
+              *-usb:3
+                   descripción: Vídeo
+                   producto: EasyCamera
+                   fabricante: SunplusIT Inc
+                   id físico: 9
+                   información del bus: usb@1:9
+                   versión: 53.09
+                   capacidades: usb-2.00
+                   configuración: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+           *-usbhost:1
+                producto: xHCI Host Controller
+                fabricante: Linux 5.4.0-52-generic xhci-hcd
+                id físico: 1
+                información del bus: usb@2
+                nombre lógico: usb2
+                versión: 5.04
+                capacidades: usb-3.00
+                configuración: driver=hub slots=6 speed=5000Mbit/s
+              *-usb
+                   descripción: Dispositivo de almacenamiento masivo
+                   producto: External USB 3.0
+                   fabricante: Toshiba
+                   id físico: 1
+                   información del bus: usb@2:1
+                   nombre lógico: scsi2
+                   versión: 1.07
+                   serie: 20130122016520
+                   capacidades: usb-3.00 scsi emulated scsi-host
+                   configuración: driver=usb-storage maxpower=896mA speed=5000Mbit/s
+                 *-disk
+                      descripción: SCSI Disk
+                      producto: External USB 3.0
+                      fabricante: TOSHIBA
+                      id físico: 0.0.0
+                      información del bus: scsi@2:0.0.0
+                      nombre lógico: /dev/sda
+                      versión: 0101
+                      serie: 81204453
+                      tamaño: 465GiB (500GB)
+                      capacidades: gpt-1.00 partitioned partitioned:gpt
+                      configuración: ansiversion=6 guid=fd571669-b9a4-481a-9ae3-67635757f226 logicalsectorsize=512 sectorsize=512
+                    *-volume:0
+                         descripción: Windows FAT volumen
+                         fabricante: mkfs.fat
+                         id físico: 1
+                         información del bus: scsi@2:0.0.0,1
+                         nombre lógico: /dev/sda1
+                         nombre lógico: /boot/efi
+                         versión: FAT32
+                         serie: a68d-2743
+                         tamaño: 447MiB
+                         capacidad: 479MiB
+                         capacidades: boot fat initialized
+                         configuración: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro name=EFI System Partition state=mounted
+                    *-volume:1
+                         descripción: partición EXT4
+                         fabricante: Linux
+                         id físico: 2
+                         información del bus: scsi@2:0.0.0,2
+                         nombre lógico: /dev/sda2
+                         nombre lógico: /
+                         versión: 1.0
+                         serie: b1d492cb-3e61-4aec-bf1e-011e78a2cef6
+                         tamaño: 223GiB
+                         capacidad: 223GiB
+                         capacidades: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                         configuración: created=2019-05-28 14:32:40 filesystem=ext4 lastmountpoint=/ modified=2021-02-05 12:39:50 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro,stripe=8191 mounted=2021-02-05 12:39:56 state=mounted
+                    *-volume:2
+                         descripción: Windows NTFS volumen
+                         fabricante: Windows
+                         id físico: 3
+                         información del bus: scsi@2:0.0.0,3
+                         nombre lógico: /dev/sda3
+                         nombre lógico: /media/alumne/dades
+                         versión: 3.1
+                         serie: f0aaae04-1e4f-6a46-86e5-6f0d9facbbd9
+                         tamaño: 242GiB
+                         capacidad: 242GiB
+                         capacidades: ntfs initialized
+                         configuración: clustersize=4096 created=2020-10-22 16:30:39 filesystem=ntfs label=dades mount.fstype=fuseblk mount.options=rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096 state=mounted
+        *-generic
+             descripción: Signal processing controller
+             producto: Sunrise Point-LP Thermal subsystem
+             fabricante: Intel Corporation
+             id físico: 14.2
+             información del bus: pci@0000:00:14.2
+             versión: 21
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pm msi cap_list
+             configuración: driver=intel_pch_thermal latency=0
+             recursos: irq:18 memoria:d132a000-d132afff
+        *-communication
+             descripción: Communication controller
+             producto: Sunrise Point-LP CSME HECI #1
+             fabricante: Intel Corporation
+             id físico: 16
+             información del bus: pci@0000:00:16.0
+             versión: 21
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pm msi bus_master cap_list
+             configuración: driver=mei_me latency=0
+             recursos: irq:126 memoria:d132c000-d132cfff
+        *-storage
+             descripción: SATA controller
+             producto: Sunrise Point-LP SATA Controller [AHCI mode]
+             fabricante: Intel Corporation
+             id físico: 17
+             información del bus: pci@0000:00:17.0
+             versión: 21
+             anchura: 32 bits
+             reloj: 66MHz
+             capacidades: storage msi pm ahci_1.0 bus_master cap_list
+             configuración: driver=ahci latency=0
+             recursos: irq:124 memoria:d1328000-d1329fff memoria:d132f000-d132f0ff ioport:f080(size=8) ioport:f088(size=4) ioport:f060(size=32) memoria:d132d000-d132d7ff
+        *-pci:0
+             descripción: PCI bridge
+             producto: Sunrise Point-LP PCI Express Root Port #1
+             fabricante: Intel Corporation
+             id físico: 1c
+             información del bus: pci@0000:00:1c.0
+             versión: f1
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuración: driver=pcieport
+             recursos: irq:120
+        *-pci:1
+             descripción: PCI bridge
+             producto: Sunrise Point-LP PCI Express Root Port #5
+             fabricante: Intel Corporation
+             id físico: 1c.4
+             información del bus: pci@0000:00:1c.4
+             versión: f1
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuración: driver=pcieport
+             recursos: irq:121 ioport:e000(size=4096) memoria:d1200000-d12fffff
+           *-network
+                descripción: Ethernet interface
+                producto: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+                fabricante: Realtek Semiconductor Co., Ltd.
+                id físico: 0
+                información del bus: pci@0000:02:00.0
+                nombre lógico: enp2s0
+                versión: 15
+                serie: a8:1e:84:d1:13:86
+                capacidad: 1Gbit/s
+                anchura: 64 bits
+                reloj: 33MHz
+                capacidades: pm msi pciexpress msix bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+                configuración: autonegotiation=on broadcast=yes driver=r8169 firmware=rtl8168h-2_0.0.2 02/26/15 latency=0 link=no multicast=yes port=MII
+                recursos: irq:16 ioport:e000(size=256) memoria:d1204000-d1204fff memoria:d1200000-d1203fff
+        *-pci:2
+             descripción: PCI bridge
+             producto: Sunrise Point-LP PCI Express Root Port #6
+             fabricante: Intel Corporation
+             id físico: 1c.5
+             información del bus: pci@0000:00:1c.5
+             versión: f1
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuración: driver=pcieport
+             recursos: irq:122 memoria:d1000000-d11fffff
+           *-network
+                descripción: Interfaz inalámbrica
+                producto: QCA9377 802.11ac Wireless Network Adapter
+                fabricante: Qualcomm Atheros
+                id físico: 0
+                información del bus: pci@0000:03:00.0
+                nombre lógico: wlp3s0
+                versión: 31
+                serie: f8:28:19:dd:13:95
+                anchura: 64 bits
+                reloj: 33MHz
+                capacidades: pm msi pciexpress bus_master cap_list ethernet physical wireless
+                configuración: broadcast=yes driver=ath10k_pci driverversion=5.4.0-52-generic firmware=WLAN.TF.2.1-00021-QCARMSWP-1 latency=0 link=no multicast=yes wireless=IEEE 802.11
+                recursos: irq:128 memoria:d1000000-d11fffff
+        *-isa
+             descripción: ISA bridge
+             producto: Sunrise Point-LP LPC Controller
+             fabricante: Intel Corporation
+             id físico: 1f
+             información del bus: pci@0000:00:1f.0
+             versión: 21
+             anchura: 32 bits
+             reloj: 33MHz
+             capacidades: isa bus_master
+             configuración: latency=0
+        *-memory NO RECLAMADO
+             descripción: Memory controller
+             producto: Sunrise Point-LP PMC
+             fabricante: Intel Corporation
+             id físico: 1f.2
+             información del bus: pci@0000:00:1f.2
+             versión: 21
+             anchura: 32 bits
+             reloj: 33MHz (30.3ns)
+             configuración: latency=0
+             recursos: memoria:d1324000-d1327fff
+        *-multimedia
+             descripción: Audio device
+             producto: Sunrise Point-LP HD Audio
+             fabricante: Intel Corporation
+             id físico: 1f.3
+             información del bus: pci@0000:00:1f.3
+             versión: 21
+             anchura: 64 bits
+             reloj: 33MHz
+             capacidades: pm msi bus_master cap_list
+             configuración: driver=snd_hda_intel latency=64
+             recursos: irq:129 memoria:d1320000-d1323fff memoria:d1310000-d131ffff
+        *-serial NO RECLAMADO
+             descripción: SMBus
+             producto: Sunrise Point-LP SMBus
+             fabricante: Intel Corporation
+             id físico: 1f.4
+             información del bus: pci@0000:00:1f.4
+             versión: 21
+             anchura: 64 bits
+             reloj: 33MHz
+             configuración: latency=0
+             recursos: memoria:d132e000-d132e0ff ioport:1000(size=32)
+     *-scsi
+          id físico: 0
+          nombre lógico: scsi0
+          capacidades: emulated
+        *-cdrom
+             descripción: DVD-RAM writer
+             producto: DVDRAM GUE0N
+             fabricante: HL-DT-ST
+             id físico: 0.0.0
+             información del bus: scsi@0:0.0.0
+             nombre lógico: /dev/cdrom
+             nombre lógico: /dev/cdrw
+             nombre lógico: /dev/dvd
+             nombre lógico: /dev/dvdrw
+             nombre lógico: /dev/sr0
+             versión: T.02
+             capacidades: removable audio cd-r cd-rw dvd dvd-r dvd-ram
+             configuración: ansiversion=5 status=nodisc
