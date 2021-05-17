@@ -1,10 +1,14 @@
 # Cas_6_M3
 
-_Programa volcatDeDades_a: Implementa una aplicación para la gestión de ficheros con el File class package. Se compone por los siguientes módulos:_
+_pkgGestioFitxersInstitut: Implementa una aplicación para la gestión de ficheros con el File class package. Se compone por los siguientes módulos:_
 
- * Programa inicial del proyecto con el mismo nombre. 
- *
-
+ * VolcatDeDades.java (main)
+ * ProcessarFitxers.java 
+ * IntroduirManualmentInfo.java
+ * ModificarInfoPC.java
+ * EsborrarInfoPC.java
+ * ConsultarPCsPerAula.java
+ 
 ## Construido con 🛠️
 * [Eclipse](https://www.eclipse.org/downloads/) - IDE
 
