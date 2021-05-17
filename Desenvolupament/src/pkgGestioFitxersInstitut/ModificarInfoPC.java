@@ -1,13 +1,13 @@
 /**
  * 
  */
-package vDades;
+package pkgGestioFitxersInstitut;
 
 /**
  * @author Daniela
  *
  */
-public class ProcessarFitxers {
+public class ModificarInfoPC {
 
 	/**
 	 * @param args
