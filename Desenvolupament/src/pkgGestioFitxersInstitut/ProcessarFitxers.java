@@ -4,6 +4,8 @@
 package pkgGestioFitxersInstitut;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -26,7 +28,7 @@ public class ProcessarFitxers {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		f = obtenerArchivo();
-		leer(f);
+		leerFiltrar(f);
 	}
 
 	/**
@@ -49,20 +51,23 @@ public class ProcessarFitxers {
 	}
 
 	/**
-	 * Method leer. Lee un archivo y filtra información específica.
+	 * Method leerFiltrar. Lee un archivo y filtra información específica.
 	 * 
 	 * @param empty.
 	 * @return
 	 */
-	public static void leer(File f2) {
+	public static void leerFiltrar(File f2) {
 		try {
 			nomfitxer = f2.getName();
 			// función para obtener número de Aula y número de PC
 			nomAulaPC(nomfitxer);
-
+			//procesar texto
 			Scanner sc = new Scanner(f2);
+			
 			while (sc.hasNext()) {
 				String s = sc.nextLine();
+				//método para obtener marca
+				getMarca(f2,s);
 				// imprimir los campos de la marca y modelo
 				if ((s.contains("Product Name")) || // dmidecode
 						(s.contains("producto")) || // lshw
@@ -79,6 +84,12 @@ public class ProcessarFitxers {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
+	}
+
+	private static void getMarca(File f2,String s) {
+		System.out.println(f2.getParent());			
+		
+		
 	}
 
 	/**
