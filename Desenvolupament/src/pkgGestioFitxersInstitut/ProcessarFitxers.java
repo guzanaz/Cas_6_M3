@@ -91,26 +91,23 @@ public class ProcessarFitxers {
 		System.out.print("AULA ");
 			// si está en la carpeta de la consulta lshw...
 			if ((nomfitxer2.charAt(0) == 'l') && (nomfitxer.charAt(1) == 's')) {
-				if ((nomfitxer2.charAt(3) == 'A') || (nomfitxer2.charAt(3) == 'a')) {
+				for(int i=4;i<=5;i++) {
 					// imprime el nro de aula así:
-					System.out.print(nomfitxer2.charAt(4));
-					System.out.print(nomfitxer2.charAt(5));
-					System.out.print(" | ");
-					System.out.print(nomfitxer2.charAt(7));
-					System.out.print(nomfitxer2.charAt(8));
-					System.out.print(nomfitxer2.charAt(9));
-					System.out.print(nomfitxer2.charAt(10));
+					System.out.print(nomfitxer2.charAt(i));
 				}
-			//si está en la carpeta de la consulta dmidecode...
-			}else if((nomfitxer2.charAt(0) == 'A')||(nomfitxer.charAt(0)=='a')) {
+					System.out.print(" | ");
+				for(int i=7;i<=10;i++)	
+					System.out.print(nomfitxer2.charAt(i));
+				}//si está en la carpeta de la consulta dmidecode...
+			else if((nomfitxer2.charAt(0) == 'A')||(nomfitxer.charAt(0)=='a')) {
 				// imprime el nro de aula así:
-				System.out.print(nomfitxer2.charAt(1));
-				System.out.print(nomfitxer2.charAt(2));
+				for (int i=1;i<=2;i++) {
+					System.out.print(nomfitxer2.charAt(i));
+				}
 				System.out.print(" | ");
-				System.out.print(nomfitxer2.charAt(4));
-				System.out.print(nomfitxer2.charAt(5));
-				System.out.print(nomfitxer2.charAt(6));
-				System.out.print(nomfitxer2.charAt(7));
+				for (int i=4; i<=7;i++) {
+					System.out.print(nomfitxer2.charAt(i));
+				}
 			}
 		System.out.println(" ");// Salto de línea
 		return;
