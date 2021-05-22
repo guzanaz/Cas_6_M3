@@ -57,9 +57,8 @@ public class ProcessarFitxers {
 	public static void leer(File f2) {
 		try {
 			nomfitxer = f2.getName();
-			// función para obtener nombre Aula
-			// imprimir línea de aula
-			nomAula(nomfitxer);
+			// función para obtener número de Aula y número de PC
+			nomAulaPC(nomfitxer);
 
 			Scanner sc = new Scanner(f2);
 			while (sc.hasNext()) {
@@ -83,13 +82,12 @@ public class ProcessarFitxers {
 	}
 
 	/**
-	 * Method nomAula. 
-	 * Para obtener nombre Aula 
-	 * Imprime el nro. del aula del ordenador.
+	 * Method nomAulaPC. 
+	 * Para obtener e imprimir número de aula y de ordenador.
 	 * @param String nomfitxer2.
 	 * @return res.
 	 */
-	private static void nomAula(String nomfitxer2) {
+	private static void nomAulaPC(String nomfitxer2) {
 		System.out.print("AULA ");
 			// si está en la carpeta de la consulta lshw...
 			if ((nomfitxer2.charAt(0) == 'l') && (nomfitxer.charAt(1) == 's')) {
@@ -114,7 +112,6 @@ public class ProcessarFitxers {
 				System.out.print(nomfitxer2.charAt(6));
 				System.out.print(nomfitxer2.charAt(7));
 			}
-
 		System.out.println(" ");// Salto de línea
 		return;
 	}
