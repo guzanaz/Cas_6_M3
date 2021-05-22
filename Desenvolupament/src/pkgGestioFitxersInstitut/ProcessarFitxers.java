@@ -57,21 +57,23 @@ public class ProcessarFitxers {
 	public static void leer(File f2) {
 		try {
 			nomfitxer = f2.getName();
-			// prints
-			System.out.println(nomfitxer);
+			// función para obtener nombre Aula
+			// imprimir línea de aula
+			nomAula(nomfitxer);
+
 			Scanner sc = new Scanner(f2);
 			while (sc.hasNext()) {
 				String s = sc.nextLine();
 				// imprimir los campos de la marca y modelo
-				if ((s.contains("Product Name")) || //dmidecode 
-						(s.contains("producto")) ||//lshw
-						(s.contains("vendor")) || //lshw
-						(s.contains("Manufacturer")) || //dmidecode 
-						(s.contains("serial")) ||//lshw
-						(s.contains("Serial Number"))) { //dmidecode 
+				if ((s.contains("Product Name")) || // dmidecode
+						(s.contains("producto")) || // lshw
+						(s.contains("vendor")) || // lshw
+						(s.contains("Manufacturer")) || // dmidecode
+						(s.contains("serial")) || // lshw
+						(s.contains("Serial Number"))) { // dmidecode
 					System.out.println(s);
 					// evitar que imprima información de placa base y posteriores
-				}else if(s.contentEquals("Base Board Information")){
+				} else if (s.contentEquals("Base Board Information")) {
 					System.exit(0);
 				}
 			}
@@ -79,4 +81,45 @@ public class ProcessarFitxers {
 			System.out.println(e.toString());
 		}
 	}
+
+	/**
+	 * Method nomAula. 
+	 * Para obtener nombre Aula 
+	 * Imprime el nro. del aula del ordenador.
+	 * @param String nomfitxer2.
+	 * @return res.
+	 */
+	private static void nomAula(String nomfitxer2) {
+		System.out.print("AULA ");
+			// si está en la carpeta de la consulta lshw...
+			if ((nomfitxer2.charAt(0) == 'l') && (nomfitxer.charAt(1) == 's')) {
+				if ((nomfitxer2.charAt(3) == 'A') || (nomfitxer2.charAt(3) == 'a')) {
+					// imprime el nro de aula así:
+					System.out.print(nomfitxer2.charAt(4));
+					System.out.print(nomfitxer2.charAt(5));
+					System.out.print(" | ");
+					System.out.print(nomfitxer2.charAt(7));
+					System.out.print(nomfitxer2.charAt(8));
+					System.out.print(nomfitxer2.charAt(9));
+					System.out.print(nomfitxer2.charAt(10));
+				}
+			//si está en la carpeta de la consulta dmidecode...
+			}else if((nomfitxer2.charAt(0) == 'A')||(nomfitxer.charAt(0)=='a')) {
+				// imprime el nro de aula así:
+				System.out.print(nomfitxer2.charAt(1));
+				System.out.print(nomfitxer2.charAt(2));
+				System.out.print(" | ");
+				System.out.print(nomfitxer2.charAt(4));
+				System.out.print(nomfitxer2.charAt(5));
+				System.out.print(nomfitxer2.charAt(6));
+				System.out.print(nomfitxer2.charAt(7));
+			}
+
+		System.out.println(" ");// Salto de línea
+		return;
+	}
+	
+	
+	
+	
 }
