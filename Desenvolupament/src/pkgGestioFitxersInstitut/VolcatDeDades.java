@@ -1,6 +1,9 @@
 package pkgGestioFitxersInstitut;
 import java.util.Scanner;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+
+
 
 /**
  * Cas_6 M03 VolcatDeDades: Programa inicial del pkgGestioFitxersInstitut.
@@ -42,7 +45,23 @@ public class VolcatDeDades {
 				System.out.println("----------------------------------");
 				System.out.println("       [p] Processar Fitxers      ");
 				System.out.println("----------------------------------");
+				//llamar método que pide ruta del directorio a procesar
 
+
+				//llamar método que crea un archivo nuevo.
+				
+				
+				//mostrar path del nuevo archivo .txt
+
+				break;
+				
+			case 'i':
+				System.out.println("----------------------------------");
+				System.out.println("     [i] Introduir Informació     ");
+				System.out.println("----------------------------------");
+				
+				
+				
 				break;
 			}
 		} while (sortir == false);
