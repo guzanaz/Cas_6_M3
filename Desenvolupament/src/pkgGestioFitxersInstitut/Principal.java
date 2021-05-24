@@ -1,12 +1,11 @@
 package pkgGestioFitxersInstitut;
 import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 
 
 /**
- * Cas_6 M03 VolcatDeDades: Programa inicial del pkgGestioFitxersInstitut.
+ * Cas_6 M03 Principal: Programa inicial del pkgGestioFitxersInstitut.
  * Implementa una aplicación para la gestión de la información de los PCs del
  * Institut Montsia a través de los módulos: ProcessarFitxers.java
  * IntroduirManualmentInfo.java ModificarInfoPC.java EsborrarInfoPC.java
@@ -17,7 +16,7 @@ import java.io.IOException;
  * @since 17-05-2021
  */
 
-public class VolcatDeDades {
+public class Principal {
 	// main
 	public static void main(String[] args) {
 		// 1.creamos el menú de opciones
@@ -63,6 +62,46 @@ public class VolcatDeDades {
 				
 				
 				break;
+			case 'm':
+				System.out.println("----------------------------------");
+				System.out.println(" [m] Modificar Informació d'un PC ");
+				System.out.println("----------------------------------");
+				
+				
+				
+				break;
+				
+			case 'e':
+				System.out.println("-----------------------------------");
+				System.out.println("  [e] Esborrar Informació d'un PC  ");
+				System.out.println("-----------------------------------");
+				
+				
+				
+				break;
+				
+			case 'c':
+				System.out.println("----------------------------------");
+				System.out.println("    [c] Consultar PCs per Aula    ");
+				System.out.println("----------------------------------");
+				
+				
+				
+				break;
+			case 'x':
+				System.out.println("---------------------------------");
+				System.out.println("            [x]Sortir!           ");
+				System.out.println("---------------------------------");
+				System.out.println("      Fi del programa. Adeu!     ");
+				System.out.println("---------------------------------");
+				sortir = true;
+				break;
+
+			default:
+				System.out.println("\n-----------------------------------------");
+				System.out.println("| COMPTE! has d'ingressar una opció vàlida!|");
+				System.out.println("-----------------------------------------\n");
+				sortir = false;
 			}
 		} while (sortir == false);
 	}// fin del main
