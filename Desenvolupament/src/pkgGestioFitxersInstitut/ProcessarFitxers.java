@@ -3,10 +3,11 @@
  */
 package pkgGestioFitxersInstitut;
 
-import java.io.File;
+import java.io.*;
 import java.util.Arrays;
 import java.io.IOException;
 import java.util.Scanner;
+
 
 /**
  * Módulo ProcessarFitxers. Pide la ruta de los ficheros a procesar. Procesa
@@ -21,10 +22,15 @@ public class ProcessarFitxers {
 	private static String dirPath;// string con la ruta
 	private static File dir;// cuando sea un directorio se crea un obj.
 	private static File[] fitxerTxt;// array de fitxers .txt
-
-	//atributo para trabajar con objeto file
+	
+	//atributo para trabajar con objeto file dentro del array de ficheros .txt
 	private static String nomfitxer;
-
+	
+	//atributos para trabajar con nuevo fichero .txt y pasarle info procesada
+	private static String ruta;
+//	private static String nomVolcatTxt;
+	private static File archivo;// archivo de texto que se creará y manipulará
+	
 	/**
 	 * @param args
 	 */
@@ -39,6 +45,7 @@ public class ProcessarFitxers {
 		//5.informamos por pantalla que sucederá
 		System.out.println("Directori "+dir.getName()+". Llistant fitxers...");
 		System.out.println(" ");
+		
 		  
         //6. Imprimir la lista de los ficheros dentro del directorio dado
         for (int i = 0; i < fitxerTxt.length; i++) {
@@ -46,10 +53,29 @@ public class ProcessarFitxers {
         }
 		System.out.println("...\nfin lista.\n");
 		
+		//7.aquí crearemos y daremos un valor al atributo VolcatTxt
 		
-		//7. llamar método processarDirectori()
-		processarDirectori(fitxerTxt);
-		//el método debería imprimir los campos específicos por cada fichero en el array 
+		ruta = "/Users/Daniela/eclipse-workspace/comprova_portatils_feb2021/aqui_guardar/archivo.txt";
+		
+		archivo = new File(ruta);
+		BufferedWriter bw;
+		
+		if (archivo.exists()) {
+			//el fichero ya existe
+			bw= new BufferedWriter(new FileWriter(archivo));
+			bw.write("el fichero de texto ya estaba creado");
+		}else {
+			//crear fichero pq no existe
+			bw=new BufferedWriter(new FileWriter(archivo));
+			bw.write("Acabo de crear el fichero de texto");
+		}
+		bw.close();
+		
+		//8. llamar método processarDirectori()
+		processarDirectori(fitxerTxt);//el método debería imprimir los campos específicos por cada fichero en el array 
+		
+		//9. acá escribimos dentro de volcatTxt
+		
 		
 		}catch(Exception e) {
             System.err.println(e.getMessage());
@@ -74,7 +100,46 @@ public class ProcessarFitxers {
 		       leerFiltrar(nuevoArchivo);
 		       }
 		}
+	
+	/**
+	 * Método demanarNomFitxerTxt(). 
+	 * Pide ingresar el nombre de un fichero txt por teclado.
+	 * @param empty.
+	 * @return Nomfitxer que es un String el nombre del directorio.
+	 */
+	private static String demanarNomFitxerTxt() {
+		Scanner scanner= new Scanner(System.in); 
+		String nomFitxerTxt;
+		System.out.println("Creant un nou fitxer per guardar la informació ");
+		System.out.println("extreta des del directori "+dir.getName());
+		System.out.println("-----------------------------------------");
+		System.out.println("       Ingressa el nom de el fitxer      ");
+		System.out.println("-----------------------------------------");
+		// scanner para ingresar la ruta del directorio a escanear
+		nomFitxerTxt = scanner.nextLine();
+		scanner.close();
+		return nomFitxerTxt;
+
+	}
+	
+	
+	private static File crearFitxer(String volcatTxtarchivo) {
+		File volcatTxt=new File (volcatTxtarchivo);
+
+		System.out.println("-----------------------------------------");
+		System.out.println("            Creant nou fitxer...        ");
+		System.out.println("-----------------------------------------\n");
 		
+		
+		if(volcatTxt.isFile()) {
+			System.out.println("S'ha creat el fitxer .txt"+volcatTxt.getName());
+		}
+		return volcatTxt;
+	}
+	
+//	private static void escribirFitxer(String line){
+//		
+//	}
 	
 	/**
 	 * Método crearDirectorio().
