@@ -199,7 +199,7 @@ public class Principal {
 		System.out.println("comprovant que la ruta sigui un directori ...\n ");
 		if (nouDir.isFile()) {
 			System.out.println("Ruta no vàlida. Ha de ser la ruta d'un directori");
-		} else if (nouDir.isDirectory()) {	
+		} else if (nouDir.isDirectory()){	
 			System.out.println(nouDir.toString() +" és un directori."+"\n");
 		}
 		return nouDir;
