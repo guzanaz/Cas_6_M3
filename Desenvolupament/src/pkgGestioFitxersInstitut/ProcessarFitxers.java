@@ -130,36 +130,6 @@ public class ProcessarFitxers {
 	}
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-  
-
-
-    
     /**
      * Devuelve el nombre del aula basado en el nombre estandarizado del archivo
      */
