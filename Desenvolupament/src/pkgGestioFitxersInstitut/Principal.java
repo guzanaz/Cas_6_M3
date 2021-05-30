@@ -226,9 +226,11 @@ public class Principal {
 			// para lshw
 			if (f.getName().startsWith("ls_")) {
 				listaPCsLS.add(ConversorPC.convertirArchivoLS(f));
+				Collections.sort(listaPCsLS, new NumPCSorter());
 				// para dmidecode
 			} else {
 				listaPCsDM.add(ConversorPC.convertirArchivoDM(f));
+				Collections.sort(listaPCsDM, new NumPCSorter());
 			}
 		}
 	}
@@ -276,8 +278,13 @@ public class Principal {
 	public static class NumPCSorter implements Comparator<PC> {
 		@Override
 		public int compare(PC o1, PC o2) {
-			return ((o1.PC).compareTo(o2.PC));
+			int nroPcCompare=o1.PC.compareTo(o2.PC);
+			return nroPcCompare==0? o1.aula.compareTo(o2.aula):nroPcCompare;
 		}
 	}
-
+/**
+ * public int compare(Foo a, Foo b) {
+        int dateComparison = a.date.compareTo(b.date);
+        return dateComparison == 0 ? a.value.compareTo(b.value) : dateComparison;
+ */
 }
