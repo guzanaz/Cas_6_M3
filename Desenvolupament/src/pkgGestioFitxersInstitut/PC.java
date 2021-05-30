@@ -31,6 +31,7 @@ public class PC
     	aula=capturar("Introdueix l'aula");
     	PC=capturar("Introdueix el nom del PC");
     	marca=capturar("Introdueix la marca");
+    	model=capturar("Introdueix el model del PC");
     	numSerie=capturar("Introdueix el número de serie");
     	macWiFi=capturar("Introdueix l'adreça MAC del WiFi");
     	macEth=capturar("Introdueix la MAC de Ethernet");

@@ -1,7 +1,5 @@
 package pkgGestioFitxersInstitut;
 import java.io.File;
-import java.util.Collections;
-import java.util.Comparator;
 import java.io.IOException; // Import the IOException class to handle errors
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -20,7 +18,6 @@ import java.util.Scanner;
 public class Output {
 	
 	public static void guardarArraylist(ArrayList<PC> listaLS, ArrayList<PC> listaDM) {
-		Collections.sort(listaLS,new PcComparator());
 		try {
 			FileWriter myWriter = new FileWriter("Output.txt");
 			myWriter.write("---------------------------------------------------------------------------------------\n");

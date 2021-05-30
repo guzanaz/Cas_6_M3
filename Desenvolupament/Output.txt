@@ -67,6 +67,8 @@ Aula:A22 || NroPC:14 || Marca:HP || Model:HP ProBook 450 G6 (8AB02ES#ABE) || Nro
 
 Aula:A22 || NroPC:12 || Marca:HP || Model:HP ProBook 450 G6 (8AB02ES#ABE) || NroSerie:5CD9339XVQ || MacWifi:50:e0:85:2e:85:a6 || MacEthernet:f8:b4:6a:ab:9a:12 
 
+Aula:23 || NroPC:01 || Marca:samsung || Model:null || NroSerie:1234569322 || MacWifi:12:23:45:e4:a3 || MacEthernet:a3:e4:43:21:12 
+
 ---------------------------------------------------------------------------------------
 |                          Información de archivos dmidecode                          |
 ---------------------------------------------------------------------------------------
