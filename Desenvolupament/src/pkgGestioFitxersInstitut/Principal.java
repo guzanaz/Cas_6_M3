@@ -86,6 +86,7 @@ public class Principal {
 				System.out.println("     [i] Introduir Informació     ");
 				System.out.println("----------------------------------");
 				listaPCsLS.add(new PC(0));
+				Output.guardarArraylist(listaPCsLS, listaPCsDM);
 				break;
 			case 'm':
 				System.out.println("----------------------------------");
@@ -186,7 +187,7 @@ public class Principal {
 
 		procesaDirectorio(fileLS);
 		procesaDirectorio(fileDm);
-
+		
 		Output.guardarArraylist(listaPCsLS, listaPCsDM);
 	}
 

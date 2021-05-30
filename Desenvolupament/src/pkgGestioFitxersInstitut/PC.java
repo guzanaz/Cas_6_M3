@@ -41,21 +41,21 @@ public class PC
     //para lshw
 	public String toString() {
 		return "Aula:" + aula + 
-				"\nNroPC:" + PC + 
-				"\nMarca:" + marca + 
-				"\nModel:" + model + 
-				"\nNroSerie:" + numSerie + 
-				"\nMacWifi:" + macWiFi + 
-				"\nMacEthernet:" + macEth+" \n" ;
+				" || NroPC:" + PC + 
+				" || Marca:" + marca + 
+				" || Model:" + model + 
+				" || NroSerie:" + numSerie + 
+				" || MacWifi:" + macWiFi + 
+				" || MacEthernet:" + macEth+" \n" ;
 	}
     
     //para dmidecode    
     public String toStringBreu(){
 		return "Aula:" + aula + 
-				"\nNroPC:" + PC + 
-				"\nMarca:" + marca + 
-				"\nModel:" + model + 
-				"\nNroSerie:" + numSerie +" \n";
+				" || NroPC:" + PC + 
+				" || Marca:" + marca + 
+				" || Model:" + model + 
+				" || NroSerie:" + numSerie +" \n";
     }
         
     //public static PC() {}
