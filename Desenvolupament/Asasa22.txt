@@ -1,0 +1,244 @@
+---------------------------------------------------------------------------------------
+|                             Información de archivos lshw                            |
+---------------------------------------------------------------------------------------
+Aula:A22
+NroPC:02
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XW1
+MacWifi:50:e0:85:2e:69:81
+MacEthernet:f8:b4:6a:ac:29:79 
+
+Aula:A22
+NroPC:03
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVM
+MacWifi:50:e0:85:2e:6a:12
+MacEthernet:f8:b4:6a:ab:9a:87 
+
+Aula:A22
+NroPC:03
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVM
+MacWifi:50:e0:85:2e:6a:12
+MacEthernet:f8:b4:6a:ab:9a:87 
+
+Aula:A22
+NroPC:05
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XTS
+MacWifi:50:e0:85:32:a7:f8
+MacEthernet:f8:b4:6a:ab:9a:07 
+
+Aula:A22
+NroPC:06
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339X7Y
+MacWifi:50:e0:85:47:ce:26
+MacEthernet:f8:b4:6a:ab:9b:8e 
+
+Aula:22AULA
+NroPC:07
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339X8L
+MacWifi:50:e0:85:48:84:bf
+MacEthernet:52:54:00:db:a3:41 
+
+Aula:A22
+NroPC:09
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVS
+MacWifi:50:e0:85:32:a8:f7
+MacEthernet:f8:b4:6a:ac:2d:db 
+
+Aula:A22
+NroPC:10
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XTK
+MacWifi:50:e0:85:32:b0:04
+MacEthernet:f8:b4:6a:ab:a4:85 
+
+Aula:A22
+NroPC:11
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XV4
+MacWifi:50:e0:85:32:a8:8e
+MacEthernet:f8:b4:6a:ab:9a:0a 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVQ
+MacWifi:50:e0:85:2e:85:a6
+MacEthernet:f8:b4:6a:ab:9a:12 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVQ
+MacWifi:50:e0:85:2e:85:a6
+MacEthernet:f8:b4:6a:ab:9a:12 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVQ
+MacWifi:50:e0:85:2e:85:a6
+MacEthernet:f8:b4:6a:ab:9a:12 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVQ
+MacWifi:50:e0:85:2e:85:a6
+MacEthernet:f8:b4:6a:ab:9a:12 
+
+Aula:A22
+NroPC:13
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVD
+MacWifi:50:e0:85:2e:69:72
+MacEthernet:f8:b4:6a:ab:9a:16 
+
+Aula:A22
+NroPC:14
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVR
+MacWifi:50:e0:85:2e:85:ba
+MacEthernet:f8:b4:6a:ab:9a:11 
+
+Aula:A22
+NroPC:15
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XW0
+MacWifi:50:e0:85:2e:69:9a
+MacEthernet:52:54:00:82:71:47 
+
+Aula:A22
+NroPC:16
+Marca:HP
+Model:HP ProBook 450 G6 (8AB02ES#ABE)
+NroSerie:5CD9339XVK
+MacWifi:50:e0:85:2e:69:f9
+MacEthernet:f8:b4:6a:ab:99:67 
+
+---------------------------------------------------------------------------------------
+|                          Información de archivos dmidecode                          |
+---------------------------------------------------------------------------------------
+Aula:A22
+NroPC:02
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XW1 
+
+Aula:A22
+NroPC:03
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVM 
+
+Aula:A22
+NroPC:03
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVM 
+
+Aula:A22
+NroPC:05
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XTS 
+
+Aula:A22
+NroPC:06
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339X7Y 
+
+Aula:22AULA
+NroPC:07
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339X8L 
+
+Aula:A22
+NroPC:09
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVS 
+
+Aula:A22
+NroPC:10
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XTK 
+
+Aula:A22
+NroPC:11
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XV4 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVQ 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVQ 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVQ 
+
+Aula:A22
+NroPC:12
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVQ 
+
+Aula:A22
+NroPC:13
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVD 
+
+Aula:A22
+NroPC:14
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVR 
+
+Aula:A22
+NroPC:15
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XW0 
+
+Aula:A22
+NroPC:16
+Marca:HP
+Model:HP ProBook 450 G6
+NroSerie:5CD9339XVK 
+

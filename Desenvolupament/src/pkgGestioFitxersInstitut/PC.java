@@ -3,6 +3,8 @@
  */
 package pkgGestioFitxersInstitut;
 
+import java.util.Scanner;
+
 public class PC
 {
     
@@ -14,6 +16,8 @@ public class PC
     public String macWiFi;
     public String macEth;
 	
+    public  PC(){}
+
     public PC(String aula, String PC, String marca, String numSerie, String macWiFi, String macEth){
         this.aula=aula;
         this.PC=PC;
@@ -23,7 +27,17 @@ public class PC
         this.macEth=macEth;
     }
     
-    public PC(){}
+    public PC(int i){
+    	aula=capturar("Introdueix l'aula");
+    	PC=capturar("Introdueix el nom del PC");
+    	marca=capturar("Introdueix la marca");
+    	numSerie=capturar("Introdueix el número de serie");
+    	macWiFi=capturar("Introdueix l'adreça MAC del WiFi");
+    	macEth=capturar("Introdueix la MAC de Ethernet");
+    	
+    }
+    
+    
     //para lshw
 	public String toString() {
 		return "Aula:" + aula + 
@@ -44,9 +58,14 @@ public class PC
 				"\nNroSerie:" + numSerie +" \n";
     }
         
-    
+    //public static PC() {}
    
-    
+    private static String capturar(String enunciado){
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println(enunciado);
+    	return sc.nextLine();
+    	
+    }
     
 }
 

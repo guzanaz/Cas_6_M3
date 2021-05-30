@@ -79,7 +79,7 @@ public class ProcessarFitxers {
 		listaLSf.sort(new NumPCSorter());
 		listaDmf.sort(new NumPCSorter());
 
-		Output.guardarArraylist(listaLSf, listaDmf);
+		Output.guardaPerAula(listaLSf, listaDmf);
 	}
 
 	/**

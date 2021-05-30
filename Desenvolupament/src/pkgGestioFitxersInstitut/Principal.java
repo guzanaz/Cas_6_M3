@@ -1,4 +1,5 @@
 package pkgGestioFitxersInstitut;
+
 import java.io.File;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -8,21 +9,16 @@ import java.util.Comparator;
 /**
  * Cas_6 M03 Principal: Programa inicial del pkgGestioFitxersInstitut.
  * Implementa una aplicación para la gestión de la información de los PCs del
- * Institut Montsia a través de los módulos: 
- * ProcessarFitxers.java
- * PC.java
- * ConversorPC.java
- * Output.java
- * IntroduirManualmentInfo.java 
- * ModificarInfoPC.java 
- * EsborrarInfoPC.java
- * ConsultarPCsPerAula.java
+ * Institut Montsia a través de los módulos: ProcessarFitxers.java PC.java
+ * ConversorPC.java Output.java IntroduirManualmentInfo.java
+ * ModificarInfoPC.java EsborrarInfoPC.java ConsultarPCsPerAula.java
+ * 
  * @author Daniela Gallardo Reyes
  * @version 1.2 (entrega express)
  * @since 17-05-2021
  */
 
-public class Principal { 		
+public class Principal {
 	private static ArrayList<PC> listaPCsLS = new ArrayList<>();
 	private static ArrayList<PC> listaPCsDM = new ArrayList<>();
 
@@ -54,9 +50,7 @@ public class Principal {
 		Principal.listaPCsDM = listaPCsDM;
 	}
 
-	
-	
-	// main 
+	// main
 	public static void main(String[] args) {
 		// 1.creamos el menú de opciones
 		String[] opcions = new String[6];
@@ -91,7 +85,7 @@ public class Principal {
 				System.out.println("----------------------------------");
 				System.out.println("     [i] Introduir Informació     ");
 				System.out.println("----------------------------------");
-				
+				listaPCsLS.add(new PC(0));
 				break;
 			case 'm':
 				System.out.println("----------------------------------");
@@ -136,6 +130,7 @@ public class Principal {
 	/**
 	 * Función Menú. Muestra el menú de opciones por pantalla y pide ingresar una
 	 * opción del menú por teclado.
+	 * 
 	 * @param opcions
 	 * @return variable tipo char (opción seleccionada)
 	 */
@@ -152,20 +147,28 @@ public class Principal {
 		System.out.println("----------------------------------");
 		System.out.println("       [ingressa una opció]       ");
 
-		// entrada por teclado
-		Scanner sc = new Scanner(System.in);
-		// guardamos la entrada en opcio
-		char opcio1 = sc.next().charAt(0);
-		// retornamos opcio al main
-		return opcio1;
+			// entrada por teclado
+			Scanner sc = new Scanner(System.in);
+			// guardamos la entrada en opcio
+			try {
+			char opcio1 = sc.next().charAt(0);
+			return opcio1;
+
+			// retornamos opcio al main
+			}catch(Exception e) {				
+
+			}
+			return ' ' ;
+
 	}
 
 	/**
-	 * Método procesarDirectoriosLsDm.
-	 * Lee los subdirectorios del directorio indicado.
-	 * Pide ingresar la ruta del directorio padre y lo procesa con el método crearDirectorio().
-	 * Procesa los subdirectorios llamando al método procesaDirectorio().
-	 * Guarda información extraída con el método guardarArraylist(). 
+	 * Método procesarDirectoriosLsDm. Lee los subdirectorios del directorio
+	 * indicado. Pide ingresar la ruta del directorio padre y lo procesa con el
+	 * método crearDirectorio(). Procesa los subdirectorios llamando al método
+	 * procesaDirectorio(). Guarda información extraída con el método
+	 * guardarArraylist().
+	 * 
 	 * @param empty
 	 * @return void
 	 */
@@ -186,11 +189,12 @@ public class Principal {
 
 		Output.guardarArraylist(listaPCsLS, listaPCsDM);
 	}
-	
+
 	/**
 	 * Método crearDirectorio(). Crea un atributo de tipo File que es un Directorio.
-	 * Revisa si la ruta es un directorio o fichero.
-	 * Si es un directorio lo retorna como un atributo tipo File.
+	 * Revisa si la ruta es un directorio o fichero. Si es un directorio lo retorna
+	 * como un atributo tipo File.
+	 * 
 	 * @param dirPath string con la ruta del directorio.
 	 * @return nouDir atributo objeto de File con la ruta del directorio a procesar.
 	 */
@@ -199,39 +203,42 @@ public class Principal {
 		System.out.println("comprovant que la ruta sigui un directori ...\n ");
 		if (nouDir.isFile()) {
 			System.out.println("Ruta no vàlida. Ha de ser la ruta d'un directori");
-		} else if (nouDir.isDirectory()){	
-			System.out.println(nouDir.toString() +" és un directori."+"\n");
+		} else if (nouDir.isDirectory()) {
+			System.out.println(nouDir.toString() + " és un directori." + "\n");
 		}
 		return nouDir;
 	}
-	
-	/** Método procesaDirectorio().
-	 * Al pasarle un directorio como argumento añade al ArrayList correspondiente
-	 * (según criterio) los objetos PC descritos en los archivos.
+
+	/**
+	 * Método procesaDirectorio(). Al pasarle un directorio como argumento añade al
+	 * ArrayList correspondiente (según criterio) los objetos PC descritos en los
+	 * archivos.
+	 * 
 	 * @param File directori
 	 * @return void
 	 */
 	public static void procesaDirectorio(File directori) {
-		//guaradamos en un array los ficheros del directorio a procesar
+		// guaradamos en un array los ficheros del directorio a procesar
 		File[] fitxers = directori.listFiles();
-		//recorre el arrayList idea bucle for each
+		// recorre el arrayList idea bucle for each
 		for (File f : fitxers) {
-			//para lshw
+			// para lshw
 			if (f.getName().startsWith("ls_")) {
 				listaPCsLS.add(ConversorPC.convertirArchivoLS(f));
-			//para dmidecode
+				// para dmidecode
 			} else {
 				listaPCsDM.add(ConversorPC.convertirArchivoDM(f));
 			}
 		}
 	}
-	
-	/** Método filtrarPorAula().
-	 * 	Pide ingresar el nro. de aula para filtrar los PCs en el aula específicada.
-	 *  Ordena por PC y guarda el archivo según los datos del ArrayList que tenemos
-	 *  en memoria.
-	 *  @param 
-	 *  @return void
+
+	/**
+	 * Método filtrarPorAula(). Pide ingresar el nro. de aula para filtrar los PCs
+	 * en el aula específicada. Ordena por PC y guarda el archivo según los datos
+	 * del ArrayList que tenemos en memoria.
+	 * 
+	 * @param
+	 * @return void
 	 */
 	public static void filtrarPorAula() {
 		// Probando filtrado
@@ -250,10 +257,12 @@ public class Principal {
 		listaPCsDM.stream().filter(p -> p.aula.contains(aula)).forEach(p -> listaDmf.add(p));
 
 		// Ordenamos la lista por aula
+		listaLSf.sort(new AulaPCSorter());
 		listaLSf.sort(new NumPCSorter());
+		listaDmf.sort(new AulaPCSorter());
 		listaDmf.sort(new NumPCSorter());
 
-		Output.guardarArraylist(listaLSf, listaDmf);
+		Output.guardaPerAula(listaLSf, listaDmf);
 	}
 
 	public static class AulaPCSorter implements Comparator<PC> {
@@ -266,7 +275,7 @@ public class Principal {
 	public static class NumPCSorter implements Comparator<PC> {
 		@Override
 		public int compare(PC o1, PC o2) {
-			return ((o2.PC).compareTo(o1.PC));
+			return ((o1.PC).compareTo(o2.PC));
 		}
 	}
 

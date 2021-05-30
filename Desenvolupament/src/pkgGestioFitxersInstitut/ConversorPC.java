@@ -23,6 +23,7 @@ public class ConversorPC {
      * @param File source (archivo .txt del Directorio lshw).
      * @return Objeto PC.
      */
+		
     public static PC convertirArchivoLS(File source){
         PC tmpPC = new PC();
         String nomFitxer=source.getName();
@@ -46,7 +47,13 @@ public class ConversorPC {
              * @return String utilizando para filtrar método query
              **/
             private static String nomPCLS(String nomfitxer){
-                return RegEx.query("ls_.*?(.*)_(.*?(\\d*)) -", nomfitxer, 3);
+            	String firstCapture;
+            	int convertedInt;
+            	
+                firstCapture=RegEx.query("ls_.*?(.*)_(.*?(\\d*)) -", nomfitxer, 3);
+                convertedInt=Integer.parseInt(firstCapture);
+                return String.format("%02d", convertedInt);
+                
             }
     
             /** 
@@ -146,11 +153,15 @@ public class ConversorPC {
 		     * @return String utilizando para filtrar método query
 		     **/
             private static String nomPCDM(String nomfitxer){
-                return RegEx.query("(.*)_(.*?(\\d*))\\s-", nomfitxer, 3).toUpperCase();
+            	String firstCapture;
+            	int convertedInt;
+                firstCapture= RegEx.query("(.*)_(.*?(\\d*))\\s-", nomfitxer, 3).toUpperCase();
+                convertedInt=Integer.parseInt(firstCapture);
+                return String.format("%02d", convertedInt);
             }
     
             /** 
-             * Método String nomAulaLS().
+             * Método String nomAulaDM().
              * Devuelve el nombre del aula basado en el nombre estandarizado del archivo dmidecode. 
              * @param String nomfitxer
              * @return String con el aula obtenido con el método query
@@ -160,7 +171,7 @@ public class ConversorPC {
             }
     
             /** 
-             * Método String obtenirFabricantLS().
+             * Método String obtenirFabricantDM().
              * Extrae fabricante desde la descripción del archivo dmidecode. 
              * @param String descripción
              * @return String con el fabricante obtenido con método query 
@@ -177,7 +188,7 @@ public class ConversorPC {
              * @return String con el fabricante obtenido con método query 
              **/
             private static String obtenirModelDM(String descripcion){
-                return RegEx.query("(product)o?: (.*)([\\w\\W].*){4,6}\\n\\W*(anchura: | width: ){1}",descripcion,2);
+                return RegEx.query("System Information[\\w\\W]*?Product Name: (.*)",descripcion,1);
             }
             
             /** 
