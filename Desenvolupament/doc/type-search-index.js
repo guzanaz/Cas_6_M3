@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"pkgGestioFitxersInstitut","l":"ConversorPC"},{"p":"pkgGestioFitxersInstitut","l":"Menus"},{"p":"pkgGestioFitxersInstitut","l":"Output"},{"p":"pkgGestioFitxersInstitut","l":"PC"},{"p":"pkgGestioFitxersInstitut","l":"Principal"},{"p":"pkgGestioFitxersInstitut","l":"RegEx"}];updateSearchResults();
