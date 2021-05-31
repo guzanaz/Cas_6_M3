@@ -5,6 +5,17 @@ package pkgGestioFitxersInstitut;
 
 import java.util.Scanner;
 
+/**
+ * Clase PC: Clase para construir objetos PC a partir del procesamiento de un Directorio y sus Ficheros.
+ * Se complementa con la Clase ConversorPC() que contiene los métodos que convierten texto en objetos tipo PC
+ * según los atributos establecidos en esta clase.
+ * @author Daniela
+ * @version 1.2 (entrega express)
+ * @since 17-05-2021
+ */
+
+
+
 public class PC
 {
     
@@ -128,7 +139,9 @@ public class PC
         this.macEth=macEth;
     }
     
-    //constructor a mano
+    /**
+     * Constructor desde consola, el parámetro es "dummy" y que me funcione
+     */
     public PC(int i){
     	aula=capturar("Introdueix l'aula");
     	PC=capturar("Introdueix el nom del PC");
@@ -160,8 +173,13 @@ public class PC
 				" || NroSerie:" + numSerie +" \n";
     }
         
-    //public static PC() {}
-   
+
+   /**
+    * Método Capturar().
+    * Método que recoge los atributos de un objeto PC por teclaro
+    * @param enunciado
+    * @return sc (lo recogido por el escaner desde el teclado)
+    */
     private static String capturar(String enunciado){
     	Scanner sc = new Scanner(System.in);
     	System.out.println(enunciado);

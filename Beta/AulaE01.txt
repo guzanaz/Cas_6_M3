@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------
 |                             Información de archivos lshw                            |
 ---------------------------------------------------------------------------------------
-Aula:23 || NroPC:01 || Marca:samsung || Model:null || NroSerie:1234569322 || MacWifi:12:23:45:e4:a3 || MacEthernet:a3:e4:43:21:12 
-
+Aula:E01 || NroPC:05 || Marca:HP || Model:null || NroSerie:5CD9339XJN || MacWifi:50:e0:85:49:6f:42 || MacEthernet:f8:b4:6a:ab:9a:4d
 ---------------------------------------------------------------------------------------
 |                          Información de archivos dmidecode                          |
 ---------------------------------------------------------------------------------------
+Aula:E01 || NroPC:05 || Marca:HP || Model:null || NroSerie:5CD9339XJN
