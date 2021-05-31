@@ -2,12 +2,12 @@
 
 _pkgGestioFitxersInstitut: Implementa una aplicación para la gestión de ficheros con el File class package. Se compone por los siguientes módulos:_
 
- * VolcatDeDades.java (main)
- * ProcessarFitxers.java 
- * IntroduirManualmentInfo.java
- * ModificarInfoPC.java
- * EsborrarInfoPC.java
- * ConsultarPCsPerAula.java
+ * Principal.java (main)
+ * Menus.java 
+ * PC.java
+ * ConversorPC.java
+ * RegEx.java
+ * Output.java
  
 ## Construido con 🛠️
 * [Eclipse](https://www.eclipse.org/downloads/) - IDE
