@@ -3,9 +3,7 @@ package pkgGestioFitxersInstitut;
 import java.io.File;
 import java.util.Scanner;
 import java.util.ArrayList;
-//import java.util.Collections;
-//import java.util.Comparator;
-//import java.util.Iterator;
+
 
 /**
  * Cas_6 M03 Principal: Programa inicial del pkgGestioFitxersInstitut.
